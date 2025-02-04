@@ -8,7 +8,7 @@ COPY ./requirements.txt .
 
 RUN pip install -r requirements.txt
 
-RUN nohup bash -c "ollama serve &" && sleep 3 && ollama pull qwen2.5:0.5b
+RUN nohup bash -c "ollama serve &" && sleep 3 && ollama pull llama3.2:1b
 
 COPY ./entrypoint.sh .
 
